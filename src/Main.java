@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -73,69 +72,5 @@ public class Main {
         }
 
         System.out.println("\n");
-
-        // Inny sposób, który wykorzystuje wcześniej przygotowane metody uzupełnienia i wyświetlenia tablic jedno i
-        // dwuwymiarowych.
-        System.out.println("=== Inna Metoda ===\n");
-        System.out.println("Jednowymiarowa >> ");
-        int[] Jednowymiarowa = new int[20];
-        uzupelnijJednowymiarow(Jednowymiarowa);
-        wyswietlJednowymiarowa(Jednowymiarowa);
-        System.out.println("\n");
-        System.out.println("Dwuwymiarowa >> ");
-        int[][] Dwuwymiarowa = new int[4][5];
-        uzupelnijDwuwymiarowy(Dwuwymiarowa);
-        wyswietlDwuwymiarowa(Dwuwymiarowa);
-
     }
-    // Metoda do uzupełniania tablicy jednowymiarowej liczbami losowymi
-    //Random losowa = new Random() - utworzenie obiektu klasy Random o nazwie losowa.
-    // Obiekt będzie używany do generowania licz losowych.
-    //Metoda nextInt(21) obiektu losowa generuje losową liczbę całkowitą z zakresu 0 do 20 i wewnątrz pętli, przypisuje ją
-    //do elementu tablicy o indeksie [i].
-    public static void uzupelnijJednowymiarow(int[] tablica)
-    {
-        Random losowa = new Random();
-        for(int i = 0; i < tablica.length; i++)
-        {
-            tablica[i]= losowa.nextInt(21);
-        }
-    }
-    // Metoda do wyświetlania zawartości tablicy jednowymiarowej
-
-    public static void wyswietlJednowymiarowa(int[] tablica)
-    {
-        for(int value: tablica)
-        {
-            System.out.print(value + " ");
-        }
-    }
-
-    // Metoda do uzupełniania tablicy dwuwymiarowej liczbami losowymi
-    public static  void uzupelnijDwuwymiarowy(int[][] tablica)
-    {
-        Random losowa = new Random();
-        for(int i=0; i < tablica.length; i++)
-        {
-            for(int j=0; j < tablica[i].length; j++)
-            {
-                tablica[i][j] = losowa.nextInt(21);
-            }
-        }
-    }
-
-    // Metoda do wyświetlania zawartości tablicy dwuwymiarowej
-
-    public static void wyswietlDwuwymiarowa(int[][] tablica){
-
-        for(int i=0; i < tablica.length; i++)
-        {
-            for(int j=0; j < tablica[i].length; j++)
-            {
-                System.out.print(tablica[i][j] + "\t");
-            }
-            System.out.println();
-        }
-    }
-//
 }
